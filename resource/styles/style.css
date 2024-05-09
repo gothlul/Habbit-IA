@@ -1,0 +1,500 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --cor-00: #450012;
+    --cor-01: #C51041;
+    --cor-02: #E52359;
+    --cor-03: #F54A79;
+    --cor-04: #F9779B;
+    --cor-05: #ffcfdc;
+    --black: #050505;
+
+    --bg-navbar-scroll: #E52359EE;
+
+    --fnt-txt: "Inter", sans serif;
+    --fnt-primary: "Urbanist", serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+html{
+    scroll-behavior: smooth;
+
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+.btn{
+    padding: 6px 12px;
+    border-radius: 10px;
+    background: transparent;
+    border: 3px solid white;
+}
+
+.btn p{
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-family: var(--fnt-primary);
+    font-weight: 800;
+    font-size: 1rem;
+}
+
+.btn:hover{
+    background: linear-gradient(-12deg, var(--cor-00), var(--cor-01));
+    border: 3px solid rgba( 0, 0, 0, 1);
+}
+
+.btn:hover > p{
+    color: white;
+}
+
+header{
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    z-index: 10;
+}
+
+navbar{
+    width: 100%;
+    height: 100%;
+    padding: 0 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+navbar.scroll{
+    background: var(--bg-navbar-scroll);
+    backdrop-filter: blur(20px);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
+    transition: background-color .2s;
+}
+
+#logo{
+    height: 100%;
+    width: 20%;
+}
+
+#logo img{
+    height: 100%;
+    padding: 6%;
+    transition: padding .2s;
+}
+
+navbar.scroll #logo img{
+    padding: 8%;
+}
+
+#nav{
+    flex-grow: 1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.nav-item{
+    width: 125px;
+    height: 100%;
+}
+
+.nav-item > a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: var(--fnt-primary);
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+main{
+    min-height: 100vh;
+    width: 100%;
+    margin-bottom: 160px;
+}
+
+section{
+    width: 100%;
+    padding: 0 12.5%;
+}
+
+section h2{
+    font-family: var(--fnt-primary);
+    font-weight: 700;
+    color: var(--cor-02);
+}
+
+section p:not(.btn > p){
+    font-family: var(--fnt-txt);
+    font-weight: 400;
+}
+
+#inicio{
+    height: calc(80vh + 160px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(12deg, var(--cor-01), var(--cor-01), var(--cor-03));
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+#inicio > div:first-child{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#inicio h2{
+    font-size: 3rem;
+    color: white;
+}
+
+#inicio p{
+    color: var(--cor-05);
+    font-weight: 500;
+}
+
+#inicio > div:last-child{
+    width: 40%;
+}
+
+#inicio > div img{
+    height: 425px;
+    translate: 35% 0%;
+}
+
+#break-inicio{
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    right: 0;
+    border-left: 100% solid var(--cor-01);
+    border-bottom: 25px solid transparent;
+    z-index: 2;
+}
+
+#prolog-inicio{
+    width: 100%;
+}
+
+#prolog-inicio > div:first-child{
+    width: 100%;
+    height: 75px;
+    position: relative;
+    background: var(--cor-04);
+}
+
+#prolog-inicio > div:last-child{
+    width: 0px;
+    height: 0px;
+    position: relative;
+    border-right: 100% solid var(--cor-04);
+    border-bottom: 25px solid transparent;
+}
+
+#sobre{
+    min-height: 75vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#sobre > div{
+    width: 45%;
+    height: 100%;
+    padding: 80px 0;
+}
+
+#sobre > div:first-child{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+#sobre > div:first-child img{
+    width: 75%;
+}
+
+#sobre > div:last-child{
+    min-width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+#sobre h2{
+    margin-bottom: 10px;
+}
+
+#sobre > div:last-child p{
+    text-indent: 25px;
+    text-align: justify;
+}
+
+#teste{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+}
+
+
+#teste > div{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(-12deg, var(--cor-01), var(--cor-03));
+    border-radius: 5px;
+    padding: 50px 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+#teste > div > div:first-child{
+    background: white;
+    border-radius: 5px;
+}
+
+#teste > div > div:last-child{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+#teste h2{
+    padding: 10px 20px;
+    background: linear-gradient(-10deg, var(--cor-01), var(--cor-03));
+    border-radius: 10px;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#teste-user{
+    width: clamp(350px, 400px, 1px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+#teste-user input{
+    width: 80%;
+    padding: 5px;
+    font-family: var(--fnt-txt);
+    font-weight: 500;
+    font-size: 1rem;
+    color: white;
+    border: none;
+    background: transparent;
+    border-bottom: white solid 1px;
+}
+
+#teste-user input:focus{
+    outline: none;
+}
+
+#teste-user input:-webkit-autofill{
+    filter: hue-rotate(110deg);
+    -webkit-text-fill-color: #032c9b;
+    font-weight: 600;
+    border-radius: 8px;
+}
+
+#teste-user > div{
+    display: flex;
+    gap: 10px;
+}
+
+#teste-prompt{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+#bunny-prompt{
+    max-width: 80%;
+    padding: 25px;
+    background: var(--cor-05);
+    border-radius: 10px 0 10px 10px;
+    text-indent: 10px;
+    color: var(--cor-00);
+    font-family: var(--fnt-txt);
+    font-weight: 500;
+    display: none;
+    position: relative;
+    text-align: justify;
+}
+
+#bunny-prompt div{
+    width: 0px;
+    height: 0px;
+    position: relative;
+    border-left: 20px solid var(--cor-05);
+    border-bottom: 20px solid transparent;
+    position: absolute;
+    right: -15px;
+    top: 0px;
+}
+
+#teste-prompt > div:last-child{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+#image-bunny{
+    width: 60px;
+    height: 60px;
+    display: none;
+}
+
+#audio{
+    width: 25px;
+    height: 25px;
+    object-fit: cover;
+    display: none;
+}
+
+footer{
+    width: 100%;
+    background: linear-gradient(to top, var(--cor-00), var(--cor-01));
+    padding: 80px 15% 100px 15%;
+    display: flex;
+    gap: 100px;
+    color: white;
+    font-family: var(--fnt-txt);
+    font-weight: 500;
+    font-size: 1em;
+}
+
+#prolog-footer{
+    width: 100%;
+}
+
+#prolog-footer > div:first-child{
+    width: 0px;
+    height: 0px;
+    position: relative;
+    border-right: 100% solid var(--cor-04);
+    border-top: 25px solid transparent;
+}
+
+#prolog-footer > div:last-child{
+    width: 100%;
+    height: 75px;
+    position: relative;
+    background: var(--cor-04);
+}
+
+#break-footer{
+    width: 100%;
+    position: relative;
+}
+
+#break-footer > div{
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    right: 0;
+    top: -25px;
+    border-left: 100% solid var(--cor-01);
+    border-top: 25px solid transparent;
+}
+
+
+footer > p{
+    flex-grow: 1;
+}
+
+#devname{
+    font-style: italic;
+    font-weight: 700;
+    font-size: 1em;
+}
+
+footer h3{
+    font-size: 1em;
+    font-weight: 500;
+}
+
+footer div{
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#devlinks{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#devlinks li{
+    width: 100%;
+    height: 20px;
+}
+
+#devlinks li a{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: white;
+    font-weight: 300;
+}
+
+#devlinks li a img{
+    height: 100%;
+}
+/*
+@media (max-width: 940px){
+    #inicio > div:last-child{
+        display: none;
+    }
+
+    #sobre{
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 50px;
+        padding: 100px 0;
+    }
+
+    #sobre > div{
+        padding: 0;
+    }
+
+    #sobre > div:first-child{
+        justify-content: center;
+    }
+
+    #sobre > div:last-child{
+        min-width: 80%;
+    }
+    
+}

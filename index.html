@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="resource/styles/style.css">
+    <link rel="image" href="resource/img/images/logo.svg">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <navbar>
+            <div id="logo">
+                <img src="resource/img/images/logo/logo-white.svg">          
+            </div>
+            <ul id="nav">
+                <li class="nav-item"><a href="#inicio">Home</a></li>
+                <li class="nav-item"><a href="#sobre">Sobre</a></li>
+                <li class="nav-item"><a href="#teste">Teste</a></li>
+            </ul>
+        </navbar>
+    </header>
+    <main>
+        <section id="inicio">
+            <div>
+                <h2>Conheça a Habbit</h2>
+                <p>Uma IA de perguntas e respostas</p>
+            </div>
+            <div>
+                <img alt="Imagem de um coelho" src="resource/img/Images/bunny.png">
+            </div>
+        </section>
+        <div id="break-inicio"></div>
+        <div id="prolog-inicio">
+            <div></div>
+            <div></div>
+        </div>
+        <section id="sobre">
+            <div>
+                <img src="resource/img/images/Gemini+Habbit.png" alt="">
+            </div>
+            <div>
+                <h2>Sobre a aplicação</h2>
+                <p>A Habbit é uma aplicação inteiramente didática, usada para testas a capacidade de integração multipla entre APIs distintas de IA e sintetizadores de texto.</p>
+                <p>Em seu interior, a Habbit é constituida principalmente por integrações entre scripts de coleta de texto e a inteligência artificial da Google, o Gemini IA.</p>
+                <p>Sua interface conta com um sistema de audio capaz de responder diretamente ao usuário, que pode ser facilmente desativado conforme suas necessidades</p>
+            </div>
+        </section>
+        <section id="teste">
+            <div>
+                <div>
+                    <h2>Teste a aplicação</h2>
+                </div>
+                <div>
+                    <div id="teste-user">
+                        <input type="text" id="content"/>
+                        <div>
+                            <button id="btn-envio" class="btn"><p>Enviar</p></button>
+                        </div>
+                    </div>
+                    <div id="teste-prompt">
+                        <div id="bunny-prompt">
+                            <p id="prompt"></p>
+                            <div></div>
+                        </div>
+                        <div>
+                            <img id="image-bunny" src="resource/img/icons/bunny.svg" alt="Mascote de resposta">
+                            <img id="audio" src="resource/img/icons/audioon.svg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div id="prolog-footer">
+        <div></div>
+        <div></div>
+    </div>
+    <div id="break-footer">
+        <div></div>
+    </div>
+    <footer>
+        <p>&#169; Todos os direitos reservados - Desenvolvido por <span id="devname">Lucas Rasoppi</span></p>
+        <div>
+            <h3>Redes do desenvolvedor:</h3>
+            <ul id="devlinks">
+                <li>
+                    <a href="https://www.linkedin.com/in/lucas-rasoppi-6b8000207/" target="_blank">
+                        <img src="resource/img/icons/linkedin.svg" alt="icone do Linkedin">
+                        <p>Lucas Rasoppi</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/gothlul" target="_blank">
+                        <img src="resource/img/icons/github.svg" alt="icone do Github">
+                        <p>@gothlul</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSGLdfmpTlRJBCrtMtmMVhLcNlPHnlLwkGBDzgGjTVRBghQDjtQmmZJXKzLPCGcqDBbqFPlc" target="_blank">
+                        <img src="resource/img/icons/email.svg" alt="icone do Gmail">
+                        <p>lrasoppi11@gmail.com</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://gothlul.github.io/Portfolio/" target="_blank">
+                        <img src="resource/img/icons/portflio.svg" alt="icone de Arquivo">
+                        <p>Portifólio</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <script src="resource/scripts/main.js"></script>
+    <script type="importmap">
+        {
+            "imports": {
+                "@google/generative-ai": "https://esm.run/@google/generative-ai"
+            }
+        }
+    </script>
+    <script type="module" src="resource/scripts/api.js"></script>
+</body>
+
+</html>
