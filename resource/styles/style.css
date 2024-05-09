@@ -52,8 +52,10 @@ body{
 }
 
 .btn:hover{
+    padding: 9px 15px;
     background: linear-gradient(-12deg, var(--cor-00), var(--cor-01));
-    border: 3px solid rgba( 0, 0, 0, 1);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, .5);
+    border: none;
 }
 
 .btn:hover > p{
@@ -295,13 +297,12 @@ section p:not(.btn > p){
 #teste-user{
     width: clamp(350px, 400px, 1px);
     display: flex;
-    flex-direction: column;
     align-items: center;
     gap: 10px;
 }
 
 #teste-user input{
-    width: 80%;
+    flex-grow: 1;
     padding: 5px;
     font-family: var(--fnt-txt);
     font-weight: 500;
