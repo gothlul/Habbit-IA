@@ -35,7 +35,7 @@ function promptVerify(prompt){
         prompt = 'escreva "Escreva algo antes de enviar!!"';
     }
 
-    prompt += "(pt-br). Interprete como uma IA integrada por uma pessoa";
+    prompt += "(pt-br). caso eu esteja pedindo uma tabela, me retorne-a em formato html";
 
     return prompt;
 }
